@@ -1,0 +1,286 @@
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.darker{
+    background-color: #313D41;
+    color: #E0E2ED;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+.lighter{
+    background-color: #E0E2ED;
+    color: #313D41;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+.header{
+    width: 100%;
+    justify-content: space-between;
+}
+.logo{
+    font-style:normal;
+    font-weight: 500;
+    font-size: 50px;
+    margin-right: 50px;
+    z-index: 999;
+}
+.navs{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 25px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #E0E2ED; /*required since they are hyperlinks*/
+}
+.currnav{
+    display: inline-block; 
+    border-bottom: 2px solid #E0E2ED; /*underline color for current shown page*/
+    padding-bottom: 5px;
+}
+.socmed button {
+    background: none;
+    border: none;
+    color: #E0E2ED; /*for buttons*/
+    cursor: pointer;
+    margin-left: 20px;
+}
+.menu-icon {
+    display: none;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 999;
+}
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.dropdown-menu li {
+    margin: 10px 0;
+}
+.dropdown-menu a {
+    color: #E0E2ED;
+    text-decoration: none;
+}
+img {
+    max-height: 20%;
+    max-width: 20%;
+}
+.txt{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+}
+.des{
+    text-align: left;
+    font-size:small;
+    font-size: 20px;
+}
+.chartcon{
+    width: 33.33%;
+    margin: auto;
+}
+.legendItem {
+    margin: 10px;
+    font-size: 20px;
+}
+.colorBox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #313D41; /* Add border to color box for better visibility */
+    display: inline-flex;
+}
+canvas{
+    width: 100% !important;
+    height: auto !important;
+}
+/*for the dropdown*/
+hr{
+    width: 100%;
+}
+.work-experience{
+    flex-direction: column; 
+    width: 50%; 
+    align-items:flex-start; 
+    padding: 0;
+}
+.job {
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.dropdown-btn {
+    color: #E0E2ED;
+    text-align: left;
+    font-size: 40px;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #E0E2ED;
+    cursor: pointer;
+    background-color: #313D41;
+    font-family: "Playfair Display", serif;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.dropdown-btn:focus {
+    outline: none;
+}
+.dropdown-content {
+    display: none;
+}
+.dropdown-content p {
+    margin: 20px;
+}
+.responsibilities {
+    margin: 20px; /* Remove default margin */
+    padding-left: 20px; /* Add some padding for the bullets */
+    list-style-type: disc; /* Add bullets */
+}
+.responsibilities li {
+    margin-bottom: 10px; /* Add space between list items */
+    margin-left: 10px;
+}
+.lighter .job .dropdown-btn{
+    background-color: #E0E2ED; 
+    color: #313D41; 
+    border-top: 1px solid #313D41;
+}
+.title{
+    width: 50%;
+    position: sticky;
+    top: 0;  /* Element will stick to the top of its containing block */
+    
+}
+.flexs{
+    align-items: flex-start;
+}
+/* For the certdisplay */
+.cert .des {
+    cursor: pointer;
+}
+.cert .des:hover{
+    text-decoration: underline;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.modal-content {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content.show {
+    transform: scale(1); /* Scale to normal size */
+}
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+
+}
+.close:hover,
+.close:focus {
+    color: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cert-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
+    display: block;
+}
+.footer{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.footer .navs{
+    padding: 5px 0;
+}
+@media screen and (max-width: 768px){
+    .logonav nav{
+        display:none;      
+    }
+    .socmed{
+        display: none;
+    }
+    .menu-icon {
+        display: inline;
+    }
+    img {
+        max-height: 40%;
+        max-width: 40%;
+    }
+    .darker, .lighter{
+        flex-direction: column;    
+    }
+    .txt, .dropdown-btn{
+        font-size: 25px;
+    }
+    .des, .legendItem{
+        font-size: 15px;
+    }
+    .chartcon{
+        width: 66.66%;
+    }
+    .work-experience{
+        width: 100%;
+    }
+    .title{
+        position: relative;
+    }
+}
+body.no-scroll {
+    overflow: hidden;
+    padding-right: 17px;
+  }

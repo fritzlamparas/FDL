@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset set="UTF-8">  
+        <meta name="viewport" content = "width=device-width, initial-scale=1">
+        <link rel="stylesheet" href = "style.css">
+        <title>FDL</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://kit.fontawesome.com/dda0a0614a.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="header darker" style="flex-direction: row;">
+            <div class="logonav darker" style="padding: 0;">
+                <div class ="logo">FDL</div>
+                <nav>
+                    <a class="navs currnav">Info</a>
+                    <a href="work.html" class="navs">Work</a>
+                    <a href="contact.html" class="navs">Contact</a>
+                </nav>
+            </div>
+            <div class="socmed">
+                <a href="https://www.facebook.com/fritzkie.paras">
+                    <button><i class="fa-brands fa-facebook fa-2x"></i></button></a>    
+                <a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/">   
+                    <button><i class="fa-brands fa-linkedin fa-2x"></i></button></a>
+                <a href="https://m.me/fritzkie.paras"> 
+                    <button><i class="fa-brands fa-facebook-messenger fa-2x"></i></button></a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
+                ☰
+            </div>
+            <div class="dropdown-menu darker" id="dropdownMenu">
+                <ul>
+                  <li><a href="info.html">Info</a></li>
+                  <li><a href="work.html">Work</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="https://www.facebook.com/fritzkie.paras">Facebook</a></li>
+                  <li><a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/">LinkedIn</a></li>
+                  <li><a href="https://m.me/fritzkie.paras">Messenger</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="darker">
+            <img src="1.jpg" alt="Self-Portrait" title="Self-Portrait">
+            <p class="txt">
+                Fritz D. Lamparas is a computer engineer and tech enthusiast based in Quezon City. He is known for his extensive expertise in technology and software development, all presented with a clean and minimalist aesthetic.
+            </p>
+            <img src="2.jpg" alt="Self-Portrait" title="Self-Portrait">
+        </div>
+        <div class="lighter" style="flex-direction: column;">
+            <p class="txt">
+                Skills and Proficiency
+            </p>
+            <p class="des" style="text-align: center;">
+                The following chart shows a reference of his primary skills and how much he is proficient with it.
+            </p>
+            <div class="chartcon">
+                <canvas id="myBarChart" width="10" height="10"></canvas>
+            </div>
+            <div id="legrow">
+            </div>
+        </div>
+        <div class="darker flexs">
+            <div class="txt title">
+                Work Experience
+            </div>
+            <div class="work-experience darker">
+                <div class="job">
+                    <button class="dropdown-btn"><p>IT Department Leader</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>Company:</strong> ChrisImm Sentimo Kumon</p>
+                        <p class="des"><strong>Location:</strong> Work from Home</p>
+                        <p class="des"><strong>Nature of Work:</strong> On-The-Job Training</p>
+                        <p class="des"><strong>Duration:</strong> Aug. 2022 - Sept. 2022</p>
+                        <p class="des"><strong>Responsibilities:</strong></p>
+                        <ul class="responsibilities">
+                            <li class="des">Contributed to the data administration tasks handled by the company.</li>
+                            <li class="des">Supervised the OJT batch by coordinating assignments and showcasing the team's contributions to the company.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <button class="dropdown-btn"><p>Customer Service Representative</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>Company:</strong> Teleperformance</p>
+                        <p class="des"><strong>Location:</strong> Vertis North, Quezon City</p>
+                        <p class="des"><strong>Nature of Work:</strong> Full-Time</p>
+                        <p class="des"><strong>Duration:</strong> Oct. 2023 - Aug. 2024</p>
+                        <p class="des"><strong>Responsibilities:</strong></p>
+                        <ul class="responsibilities">
+                            <li class="des">Delivered exceptional post-purchase phone support for US customers, resolving issues, and providing information on the policies of the company to the customers.</li>
+                            <li class="des">Demonstrated strong communication and problem-solving skills, resulting in positive customer feedback and enhancing the overall customer experience.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <button class="dropdown-btn"><p>Marketing Department Intern</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>Company:</strong> Locale Food Groupe</p>
+                        <p class="des"><strong>Location:</strong> New Manila, Quezon City</p>
+                        <p class="des"><strong>Nature of Work:</strong> Work Immersion</p>
+                        <p class="des"><strong>Duration:</strong> Feb. 2019 - Mar. 2019</p>
+                        <p class="des"><strong>Responsibilities:</strong></p>
+                        <ul class="responsibilities">
+                            <li class="des">Assisted in inquiries on social media pages of the restaurants owned by the company.</li>
+                            <li class="des">Coordinated  in brainstorming sessions for the expansion plan of the company.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <button class="dropdown-btn"><p>Administrative Assistant</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>Company:</strong> Office of Councilor Luis O. Asistio III</p>
+                        <p class="des"><strong>Location:</strong> Caloocan City, Metro Manila</p>
+                        <p class="des"><strong>Nature of Work:</strong> Special Program for Employment of Students</p>
+                        <p class="des"><strong>Duration:</strong> May 2019 - June 2019</p>
+                        <p class="des"><strong>Responsibilities:</strong></p>
+                        <ul class="responsibilities">
+                            <li class="des">Managed and organized complaints being addressed and other relevant files related to the Councilor.</li>
+                            <li class="des">Engaged in guest relations and running errands for other offices.</li>
+                        </ul>
+                        <div style="border-top: 1px dashed #E0E2ED;"> 
+                            <p class="des"><strong>Company:</strong> DOLE CAMANAVA Field Office</p>
+                            <p class="des"><strong>Location:</strong> Caloocan City, Metro Manila</p>
+                            <p class="des"><strong>Nature of Work:</strong> Special Program for Employment of Students</p>
+                            <p class="des"><strong>Duration:</strong> May 2018 - June 2018</p>
+                            <p class="des"><strong>Responsibilities:</strong></p>
+                            <ul class="responsibilities">
+                                <li class="des">Handled data concerning the payrolls for previous batches of SPES (Special Program for Employment of Students) beneficiaries.</li>
+                                <li class="des">Aided in guest relations and performed errands for various offices.</li>
+                            </ul>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lighter flexs">
+            <div class="txt title">
+                Awards and Recognitions
+            </div>
+            <div class="work-experience lighter">
+                <div class="job">
+                    <button class="dropdown-btn"><p>Collegiate Years</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="listers/1.jpg">Participated as an MC in the 5th Annual Software Engineering Day in Polytechnic University of the Philippines (2023)</li>
+                            <li class="des" data-img="listers/2.jpg">President’s List – 4th Year Second Semester (S.Y. 2022-2023) </li>
+                            <li class="des" data-img="listers/3.jpg">Dean’s List – 4th Year First Semester (S.Y. 2022-2023)</li>
+                            <li class="des" data-img="listers/4.jpg">President’s List – 2nd Year Second Semester (S.Y. 2020-2021)</li>
+                            <li class="des" data-img="listers/5.jpg">President’s List – 2nd Year First Semester (S.Y. 2020-2021)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <button class="dropdown-btn"><p>Other Academic Years</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <ul class="responsibilities">
+                            <li class="des">With Honors in Overall Class (S.Y. 2017- 2018)</li>
+                            <li class="des">3rd Place - HEKASI Quiz Bee (2018) </li>
+                            <li class="des">Top 2 in Overall Class (S.Y. 2015-2016)</li>
+                            <li class="des">3rd Place Sports Writing in English – Districts VIII and IX Young Writers Training in Campus Journalism (2011)</li>
+                            <li class="des">Valedictorian (S.Y. 2006-2007)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="darker flexs">
+            <div class="txt title">
+                Seminars and Certifications
+            </div>
+            <div class="work-experience darker">
+                <div class="job">
+                    <button class="dropdown-btn"><p>2023</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>MachIntellect: Unlocking the Synergy of Tech and Mind.</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs/1.jpg">Computer Vision </li>
+                            <li class="des" data-img="certifs/2.jpg">AI in Robotics</li>
+                            <li class="des" data-img="certifs/3.jpg">Cloud Computing</li>
+                            <li class="des" data-img="certifs/4.jpg">Natural Language Processing</li>
+                        </ul>
+                        <p class="des"><strong>Beyond Aesthetics: UI/UX Design and Web Development for Optimal Performance</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs/5.jpg">UI/UX Design </li>
+                            <li class="des" data-img="certifs/6.jpg">Web Development</li>
+                        </ul>
+                        <p class="des"><strong>Data Safari: Unlocking Insights in the Data Wilderness</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs/7.png"> Artificial Intelligence in Big Data </li>
+                            <li class="des" data-img="certifs/8.png">Charting your Career: Boosting your Start with a Strong Big Data Portfolio</li>
+                        </ul>
+                        <p class="des"><strong>PIXEL: Pushing Innovation and Excellence in Leading-edge Technologies</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs/9.png">Agile Project Management for IT Projects</li>
+                            <li class="des" data-img="certifs/10.png">Penetration Testing and Security Assessments for Software Applications</li>
+                            <li class="des" data-img="certifs/11.png">Navigating the Evolving Threat Landscape</li>
+                            <li class="des" data-img="certifs/12.png">Exploring Robotic Process Automation</li>
+                            <li class="des" data-img="certifs/13.png">Blockchain Technology 101</li>
+                            <li class="des" data-img="certifs/14.png">The Evolution of 3Cs: Cybersecurity, Cryptocurrency and Chat-GPT</li>
+                            <li class="des" data-img="certifs/15.png">Unleashing the Power of Cloud Computing</li>
+                            <li class="des" data-img="certifs/16.png">Getting Started with Amazon Sagemaker in Beginner 101</li>
+                            <li class="des" data-img="certifs/17.png">Data Privacy and Compliance</li>
+                            <li class="des" data-img="certifs/18.png">Automating the Software Development Lifecycle with DevOps, Containerization, and CI/CD</li>
+                            <li class="des" data-img="certifs/19.png">Unlocking the Power of Blockchain: Exploring Endless Possibilities and Real-World Applications</li>
+                            <li class="des" data-img="certifs/20.png">Exploring React: A Deep Dive into Front-End Development</li>
+                            <li class="des" data-img="certifs/21.png">Among the Cyber Impostors: Empowering Awareness and Protection</li>
+                            <li class="des" data-img="certifs/22.png">Affective Computing for Computer Engineers</li>
+                            <li class="des" data-img="certifs/23.png">Systems and Automation 101: GoHighLevel, Zapier, and More</li>
+                            <li class="des" data-img="certifs/24.png">The Sixth Wave of Innovation: AI, IOT, and Robotics</li>
+                            <li class="des" data-img="certifs/25.jpg"> Unity 2D Platformer Game Development </li>
+                        </ul>
+                        <p class="des"><strong>BRIGHT: Bringing Revolutionary Ideas and Groundbreaking High Tech Solution</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs/26.jpg">Scientific Journal Writing</li>
+                            <li class="des" data-img="certifs/27.jpg">Intellectual Property Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <button class="dropdown-btn"><p>2022</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>Mindbank Training and Skills Corp.</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">Contact Center Services NC II</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <button class="dropdown-btn"><p>2021</p><span>▼</span></button>
+                    <div class="dropdown-content">
+                        <p class="des"><strong>def IT Pantry(): A webinar series for the latest web technologies</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs2021/25.jpg">Debugging Web Apps through Selenium Test Automation</li>
+                            <li class="des" data-img="certifs2021/2.jpg">How Games Inspired my Programming Skills</li>
+                            <li class="des" data-img="certifs2021/2.jpg">Intro to Python</li>
+                            <li class="des" data-img="certifs2021/25.jpg">Intro to Django</li>
+                            <li class="des" data-img="certifs2021/25.jpg">Python for Data Engineers</li>
+                            <li class="des" data-img="certifs2021/25.jpg">Software Engineering and Tech Communities</li>
+                        </ul>
+                        <p class="des"><strong>LinkedIn Learning</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des" data-img="certifs2021/25.jpg">HTML Essential Training</li>
+                            <li class="des" data-img="certifs2021/25.jpg">Learning SQL Programming</li>
+                            <li class="des" data-img="certifs2021/25.jpg">Power BI Essential Training</li>
+                            <li class="des" data-img="certifs2021/25.jpg">Succeeding in Web Development: Full Stack and Front End</li>
+                        </ul>
+                        <p class="des"><strong>PUP - INTELLECTUAL PROPERTY MANAGEMENT OFFICE <br> AND THE INNOVATION AND TECHNOLOGY SUPPORT OFFICE</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">IP Awareness and Patent Searching Webinar</li>
+                        </ul>
+                        <p class="des"><strong>PUP-CpE Webinars 2021</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">Agile Scrum Framework</li>
+                            <li class="des">Agile Testing and The Seven Testing</li>
+                            <li class="des">Data Mining: Process, Concepts, and Tools</li>
+                            <li class="des">The Colors of Cybersecurity: Be Brave or Be Smart</li>
+                            <li class="des">Succeeding in Web Development: Full Stack and Front End</li>    
+                        </ul>
+                        <p class="des"><strong>TESDA Online Programs</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">Introduction to CSS</li>
+                            <li class="des">Installing and Configuring Computer Systems</li>
+                            <li class="des">Maintain Computer Systems and Networks</li>
+                            <li class="des">Setting Up Computer Networks</li>
+                            <li class="des">Setting Up Computer Servers</li>
+                            <li class="des">SMART Android Mobile Apps Development for Beginners</li>
+                            <li class="des">SMART Technopreneurship 101</li>
+                        </ul>
+                        <p class="des"><strong>Trend Micro</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">Introduction to Careers in Cybersecurity</li>
+                        </ul>
+                        <p class="des"><strong>ULAP.org Community Day 2021</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">Microsoft Azure</li>
+                        </ul>
+                        <p class="des"><strong>WebsitesAdvice</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">The Dangers of Social Engineering</li>
+                            <li class="des">The Rise of Phishing Attacks</li>
+                        </ul>
+                        <p class="des"><strong>WOCEE Tech Talk</strong></p>
+                        <ul class="responsibilities cert">
+                            <li class="des">Blockchain and the Cloud</li>
+                            <li class="des">Robotics and Machine Intelligence</li>
+                            <li class="des">Digital Technology Maximization</li>
+                        </ul>
+                    </div>
+                </div>
+ 
+            </div>
+        <!-- Modal Popup -->
+        <div id="modal" class="modal">
+            <div class="close">✖</div>
+            <div class="modal-content">
+                <img id="modal-img" src=" " alt="Certificate" class="cert-img">  
+            </div>
+        </div>
+        </div>
+        <div class="darker footer">
+            <hr>
+            <a class="navs" href="mailto:fritzlamparasofficial@gmail.com"><strong>Email Address:</strong> fritzlamparasofficial@gmail.com</a>
+            <p class="navs"><strong>Contact Num. :</strong> (0951) 074-0514</p>
+            <p class="navs"><strong>Home Address:</strong> 58 San Luis St. Villareal Brgy. Gulod, Novaliches, Quezon City, Philippines, 1117</p>
+        </div>
+    </body>
+    <script src="scripts.js"></script>
+    
+</html>
