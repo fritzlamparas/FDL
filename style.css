@@ -45,6 +45,34 @@ body, html{
     text-decoration: none;
     color: #E0E2ED; /*required since they are hyperlinks*/
 }
+.resume{
+    position: relative;
+}
+.resume::after {
+    content: "Download his resume.";
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    /*Positioning*/position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    /*Positionabovethelink*/left: 50%;
+    transform: translateX(-50%);
+    /*Optionalstyling*/opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+}
+  .resume:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
 .currnav{
     display: inline-block; 
     border-bottom: 2px solid #E0E2ED; /*underline color for current shown page*/
@@ -103,7 +131,7 @@ img {
 .des{
     text-align: left;
     font-size:small;
-    font-size: 20px;
+    font-size: 25px;
 }
 .chartcon{
     width: 33.33%;
@@ -125,9 +153,6 @@ canvas{
     height: auto !important;
 }
 /*for the dropdown*/
-hr{
-    width: 100%;
-}
 .work-experience{
     flex-direction: column; 
     width: 50%; 
@@ -163,6 +188,10 @@ hr{
 .dropdown-content p {
     margin: 20px;
 }
+.dropdown-content hr {
+    border: 1px dashed #E0E2ED;    
+}
+
 .responsibilities {
     margin: 20px; /* Remove default margin */
     padding-left: 20px; /* Add some padding for the bullets */
@@ -249,11 +278,19 @@ hr{
 .footer .navs{
     padding: 5px 0;
 }
-.footer a{
+.footer a,.footer p{
     text-decoration: none; color: #E0E2ED;
+    margin-top: 10px;
 }
 .footer a:hover{
     text-decoration: underline;
+}
+.footer hr{
+    width: 100%;
+    height:10px;
+    border-width:0;
+    color:#E0E2ED;
+    background-color:#E0E2ED;
 }
 @media screen and (max-width: 768px){
     body{
@@ -302,5 +339,6 @@ hr{
 
 body.no-scroll {
     overflow: hidden;
+    padding-right: 17px;
   }
   
