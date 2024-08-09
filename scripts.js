@@ -126,7 +126,7 @@ var span = document.getElementsByClassName("close")[0];
 var modalImg = document.getElementById("modal-img");
 
 // Get all list items
-var listItems = document.querySelectorAll('.cert .des');
+var listItems = document.querySelectorAll('.cert li');
 
 // Loop through the list items and add click event listeners
 listItems.forEach(function(item) {

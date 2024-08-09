@@ -49,10 +49,10 @@ body, html{
     position: relative;
 }
 .resume::after {
-    content: "Download his resume.";
+    content: "Download his resume";
     visibility: hidden;
-    background-color: #555;
-    color: #fff;
+    background-color: #E0E2ED ;
+    color: #313D41;
     text-align: center;
     padding: 5px;
     border-radius: 5px;
@@ -217,11 +217,15 @@ canvas{
     align-items: flex-start;
 }
 /* For the certdisplay */
-.cert .des {
+.cert li {
     cursor: pointer;
 }
-.cert .des:hover{
+.cert li:hover{
     text-decoration: underline;
+}
+.cert .navs{
+    cursor: pointer;
+    color: #313D41;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -233,7 +237,7 @@ canvas{
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -328,17 +332,6 @@ canvas{
         position: relative;
     }
 }
-@media screen and (max-width: 320px) {
-    .title {
-        position: relative;
-    }
-    body{
-        width: 100%;
-    }
-}
-
 body.no-scroll {
     overflow: hidden;
-    padding-right: 17px;
   }
-  
