@@ -1,16 +1,13 @@
 var body = document.body;
 function toggleMenu() {
     var dropdownMenu = document.getElementById("dropdownMenu");
-    var menuIcon = document.getElementById("menuIcon");
     
 
     if (dropdownMenu.style.display === "flex") {
       dropdownMenu.style.display = "none";
-      menuIcon.textContent = "☰";
       body.classList.remove("no-scroll");
     } else {
       dropdownMenu.style.display = "flex";
-      menuIcon.textContent = "X";
       body.classList.add("no-scroll");
     }
   }
