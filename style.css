@@ -12,19 +12,19 @@ body, html{
     font-style: normal;
 }
 .darker{
-    background-color: #313D41;
-    color: #E0E2ED;
+    background-color: #2c3e50;
+    color: #ECF0F1;
     display: flex;
     align-items: center;
-    padding: 2%;
+    padding: 25px 2%;
 
 }
 .lighter{
-    background-color: #E0E2ED;
-    color: #313D41;
+    background-color: #ECF0F1;
+    color: #2c3e50;
     display: flex;
     align-items: center;
-    padding: 2%;
+    padding: 25px 2%;
 }
 .header{
     width: 100%;
@@ -36,6 +36,8 @@ body, html{
     font-size: 50px;
     margin-right: 50px;
     z-index: 999;
+    text-decoration: none;
+    color: #ECF0F1; /*required since they are hyperlinks*/
 }
 .navs{
     font-style: normal;
@@ -43,7 +45,7 @@ body, html{
     font-size: 25px;
     margin-right: 20px;
     text-decoration: none;
-    color: #E0E2ED; /*required since they are hyperlinks*/
+    color: #ECF0F1; /*required since they are hyperlinks*/
 }
 .resume{
     position: relative;
@@ -51,8 +53,8 @@ body, html{
 .resume::after {
     content: "Download his resume";
     visibility: hidden;
-    background-color: #E0E2ED ;
-    color: #313D41;
+    background-color: #ECF0F1 ;
+    color: #2c3e50;
     text-align: center;
     padding: 5px;
     border-radius: 5px;
@@ -75,13 +77,13 @@ body, html{
   }
 .currnav{
     display: inline-block; 
-    border-bottom: 2px solid #E0E2ED; /*underline color for current shown page*/
+    border-bottom: 2px solid #ECF0F1; /*underline color for current shown page*/
     padding-bottom: 5px;
 }
 .socmed button {
     background: none;
     border: none;
-    color: #E0E2ED; /*for buttons*/
+    color: #ECF0F1; /*for buttons*/
     cursor: pointer;
     margin-left: 20px;
 }
@@ -115,7 +117,7 @@ body, html{
     margin: 10px 0;
 }
 .dropdown-menu a {
-    color: #E0E2ED;
+    color: #ECF0F1;
     text-decoration: none;
 }
 img {
@@ -145,7 +147,7 @@ img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    border: 1px solid #313D41; /* Add border to color box for better visibility */
+    border: 1px solid #2c3e50; /* Add border to color box for better visibility */
     display: inline-flex;
 }
 canvas{
@@ -166,15 +168,15 @@ canvas{
     overflow: hidden;
 }
 .dropdown-btn {
-    color: #E0E2ED;
+    color: #ECF0F1;
     text-align: left;
     font-size: 40px;
     padding: 20px;
     width: 100%;
     border: none;
-    border-top: 1px solid #E0E2ED;
+    border-top: 1px solid #ECF0F1;
     cursor: pointer;
-    background-color: #313D41;
+    background-color: #2c3e50;
     display: inline-flex;
     justify-content: space-between;
     font-family: "Montserrat", serif;
@@ -189,7 +191,7 @@ canvas{
     margin: 20px;
 }
 .dropdown-content hr {
-    border: 1px dashed #E0E2ED;    
+    border: 1px dashed #ECF0F1;    
 }
 
 .responsibilities {
@@ -202,9 +204,9 @@ canvas{
     margin-left: 10px;
 }
 .lighter .job .dropdown-btn{
-    background-color: #E0E2ED; 
-    color: #313D41; 
-    border-top: 1px solid #313D41;
+    background-color: #ECF0F1; 
+    color: #2c3e50; 
+    border-top: 1px solid #2c3e50;
 }
 .title{
     width: 50%;
@@ -225,7 +227,7 @@ canvas{
 }
 .cert .navs{
     cursor: pointer;
-    color: #313D41;
+    color: #2c3e50;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -253,7 +255,7 @@ canvas{
     transform: scale(1); /* Scale to normal size */
 }
 .close {
-    color: white;
+    color: #ECF0F1;
     font-size: 28px;
     font-weight: bold;
     width: 100%;
@@ -283,7 +285,7 @@ canvas{
     padding: 5px 0;
 }
 .footer a,.footer p{
-    text-decoration: none; color: #E0E2ED;
+    text-decoration: none; color: #ECF0F1;
     margin-top: 10px;
 }
 .footer a:hover{
@@ -293,9 +295,68 @@ canvas{
     width: 100%;
     height:10px;
     border-width:0;
-    color:#E0E2ED;
-    background-color:#E0E2ED;
+    color:#ECF0F1;
+    background-color:#ECF0F1;
 }
+.flexj{
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.categ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%; /* Each div takes up 50% of the row */
+    box-sizing: border-box; /* Ensures padding/margins don't cause overflow */
+    width: 50%;
+}
+/* From Uiverse.io by joe-watson-sbf */ 
+.card {
+    width: 50%;
+    flex: 1 1 50%; /* Each div takes up 50% of the row */
+    box-sizing: border-box; /* Ensures padding/margins don't cause overflow */
+    height: 254px;
+    border-radius: 4px;
+    background: #2c3e50;
+    display: flex;
+    gap: 5px;
+    padding: .4em;
+    
+  }
+  
+  .card p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: #2c3e50;
+    border: 1px solid #ECF0F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card p:hover {
+    flex: 4;
+  }
+  
+  .card p span {
+    min-width: 14em;
+    padding: .5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ECF0F1;
+    letter-spacing: .1em;
+  }
+  
+  .card p:hover span {
+    transform: rotate(0);
+  }
 @media screen and (max-width: 768px){
     body{
         width: 100%;
@@ -330,6 +391,10 @@ canvas{
     }
     .title{
         position: relative;
+    }
+    .categ, .card{
+        width: 100%;
+        flex: 1 1 100%; 
     }
 }
 body.no-scroll {
