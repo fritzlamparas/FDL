@@ -1,3 +1,32 @@
+let slideIndex = 0;
+let autoSlideTimeout;
+
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "flex";  
+    dots[slideIndex-1].className += " active";
+    autoSlideTimeout = setTimeout(showSlides, 4000);
+}
+
+
+function currentSlide(n) {
+    clearTimeout(autoSlideTimeout); 
+    slideIndex = n;
+    showSlides();
+}
+
 var body = document.body;
 function toggleMenu() {
     var dropdownMenu = document.getElementById("dropdownMenu");
@@ -55,7 +84,7 @@ var myBarChart = new Chart(ctx, {
         scales: {
             x: {
                 ticks: {
-                    display: false // Hide the x-axis labels
+                    display: false
                 }
             },
             y: {
@@ -64,13 +93,12 @@ var myBarChart = new Chart(ctx, {
         },
         plugins: {
             legend: {
-                display: false // Disable the chart legend
+                display: false
             }
         }
     }
 });
 
-// Generate the legend items
 var legendContainer = document.getElementById('legrow');
 labels.forEach((label, index) => {
     var legendItem = document.createElement('div');
@@ -95,62 +123,50 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const dropdownContent = this.nextElementSibling;
             const isActive = dropdownContent.style.display === 'block';
-
-            // Hide all dropdown contents
             document.querySelectorAll('.dropdown-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.querySelectorAll('.dropdown-btn span').forEach(span => {
                 span.textContent = '▼';
             });
-             // Toggle the clicked dropdown
              if (!isActive) {
                 dropdownContent.style.display = 'block';
-                this.querySelector('span').textContent = '▲'; // Change to up arrow
+                this.querySelector('span').textContent = '▲';
             }
-
-            // Toggle the clicked dropdown
             dropdownContent.style.display = isActive ? 'none' : 'block';
         });
     });
 });
 
-//For the certification display
-// Get the modal
 var modal = document.getElementById("modal");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Get the modal image element
 var modalImg = document.getElementById("modal-img");
 
-// Get all list items
 var listItems = document.querySelectorAll('.cert li');
 
-// Loop through the list items and add click event listeners
 listItems.forEach(function(item) {
     item.addEventListener('click', function() {
-        // Get the image source from the data attribute
+  
         var imgSrc = item.getAttribute('data-img');
-        // Set the modal image source to the clicked item's image
+    
         modalImg.src = imgSrc;
-        // Display the modal
+   
         modal.style.display = "flex";
         body.classList.add("no-scroll");
     });
 });
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
     body.classList.remove("no-scroll");
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
         body.classList.remove("no-scroll");
     }
 }
+
