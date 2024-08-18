@@ -1,32 +1,3 @@
-let slideIndex = 0;
-let autoSlideTimeout;
-
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "flex";  
-    dots[slideIndex-1].className += " active";
-    autoSlideTimeout = setTimeout(showSlides, 4000);
-}
-
-
-function currentSlide(n) {
-    clearTimeout(autoSlideTimeout); 
-    slideIndex = n;
-    showSlides();
-}
-
 var body = document.body;
 function toggleMenu() {
     var dropdownMenu = document.getElementById("dropdownMenu");
@@ -40,81 +11,88 @@ function toggleMenu() {
       body.classList.add("no-scroll");
     }
   }
-var ctx = document.getElementById('myBarChart').getContext('2d');
-var labels = ['Interpersonal Skills','Technical Proficiency','Problem-Solving Skills','Flutter','English Communication', 'Data Management', 'Machine Learning', 'Game Development', 'Web Development'];
-var backgroundColors = [
-    'rgba(255, 0 , 0, 1)',
-    'rgba(255, 127, 0, 1)',
-    'rgba(255, 255, 0, 1)',
-    'rgba(0, 255, 0, 1)',
-    'rgba(0, 0, 255, 1)',
-    'rgba(75, 0, 130, 1)',
-    'rgba(148, 0, 211, 1)',
-    'rgba(139,69,19,1)',
-    'rgba(0,0,0,1)',
-];
+  document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('myBarChart').getContext('2d');
+    if (!ctx) {
+        console.error('Canvas element not found');
+        return;
+    }
 
-var borderColors = [
-    'rgba(255, 0 , 0, 1)',
-    'rgba(255, 127, 0, 1)',
-    'rgba(255, 255, 0, 1)',
-    'rgba(0, 255, 0, 1)',
-    'rgba(0, 0, 255, 1)',
-    'rgba(75, 0, 130, 1)',
-    'rgba(148, 0, 211, 1)',
-    'rgba(139,69,19,1)',
-    'rgba(0,0,0,1)',
-];
+    var labels = ['Interpersonal Skills', 'Technical Proficiency', 'Problem-Solving Skills', 'Flutter', 'English Communication', 'Data Management', 'Machine Learning', 'Game Development', 'Web Development'];
+    var backgroundColors = [
+        'rgba(255, 0 , 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)',
+        'rgba(148, 0, 211, 1)',
+        'rgba(139,69,19,1)',
+        'rgba(0,0,0,1)',
+    ];
+    var borderColors = [
+        'rgba(255, 0 , 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)',
+        'rgba(148, 0, 211, 1)',
+        'rgba(139,69,19,1)',
+        'rgba(0,0,0,1)',
+    ];
 
-var myBarChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: labels,
-        datasets: [{
-            label: 'Proficiency',
-            data: [87.5, 90, 95, 87.50, 95, 85, 85, 87.5, 87.5, 100],
-            backgroundColor: backgroundColors,
-            borderColor: borderColors,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            x: {
-                ticks: {
-                    display: false
+    var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Proficiency',
+                data: [87.5, 90, 95, 87.5, 95, 85, 85, 87.5, 87.5, 100],
+                backgroundColor: backgroundColors,
+                borderColor: borderColors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: {
+                        display: false
+                    }
+                },
+                y: {
+                    beginAtZero: true
                 }
             },
-            y: {
-                beginAtZero: true
-            }
-        },
-        plugins: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             }
         }
-    }
+    });
+
+    var legendContainer = document.getElementById('legrow');
+    labels.forEach((label, index) => {
+        var legendItem = document.createElement('div');
+        legendItem.className = 'legendItem';
+
+        var colorBox = document.createElement('div');
+        colorBox.className = 'colorBox';
+        colorBox.style.backgroundColor = backgroundColors[index];
+        legendItem.appendChild(colorBox);
+
+        var text = document.createElement('span');
+        text.textContent = label;
+        legendItem.appendChild(text);
+
+        legendContainer.appendChild(legendItem);
+    });
 });
 
-var legendContainer = document.getElementById('legrow');
-labels.forEach((label, index) => {
-    var legendItem = document.createElement('div');
-    legendItem.className = 'legendItem';
-
-    var colorBox = document.createElement('div');
-    colorBox.className = 'colorBox';
-    colorBox.style.backgroundColor = backgroundColors[index];
-    legendItem.appendChild(colorBox);
-
-    var text = document.createElement('span');
-    text.textContent = label;
-    legendItem.appendChild(text);
-
-    legendContainer.appendChild(legendItem);
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownButtons = document.querySelectorAll('.dropdown-btn');
