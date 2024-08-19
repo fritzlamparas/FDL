@@ -360,7 +360,7 @@ canvas{
     width: 75px;
     height: 75px;
     object-fit: cover;
-    margin: 10px;
+    margin: 10px 10px 0px 20px;
 
 }
 .categ .fade img{
@@ -368,21 +368,23 @@ canvas{
     height: 100%;
     max-width: 300px;
 }
+.categ .txt{
+    text-align: left;
+}
 .slideshow-container {
     position: relative;
     max-width: 1000px;
     margin: auto;
 }
-
+.categ .hodo img {
+    max-width: 600px;
+    vertical-align: middle;
+}
 .mySlides {
     display: none;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-img {
-    vertical-align: middle;
 }
 
 .fade {
@@ -466,6 +468,9 @@ img {
     }
     .categ .fade img{
         max-width: 200px;
+    }
+    .categ .hodo img {
+        max-width: 400px;
     }
 }
 body.no-scroll {
