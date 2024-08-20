@@ -1,16 +1,21 @@
 var body = document.body;
 function toggleMenu() {
     var dropdownMenu = document.getElementById("dropdownMenu");
-    
 
-    if (dropdownMenu.style.display === "flex") {
-      dropdownMenu.style.display = "none";
-      body.classList.remove("no-scroll");
+    if (dropdownMenu.classList.contains("show")) {
+        dropdownMenu.classList.remove("show");
+        setTimeout(() => {
+            dropdownMenu.style.display = "none";
+        }, 300); // Delay to match the transition duration
+        body.classList.remove("no-scroll");
     } else {
-      dropdownMenu.style.display = "flex";
-      body.classList.add("no-scroll");
+        dropdownMenu.style.display = "flex";
+        setTimeout(() => {
+            dropdownMenu.classList.add("show");
+        }, 10); // Short delay to ensure the display property is applied
+        body.classList.add("no-scroll");
     }
-  }
+}
   document.addEventListener('DOMContentLoaded', function() {
     var ctx = document.getElementById('myBarChart').getContext('2d');
     if (!ctx) {
@@ -100,21 +105,44 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function() {
             const dropdownContent = this.nextElementSibling;
-            const isActive = dropdownContent.style.display === 'block';
+            const isActive = dropdownContent.classList.contains('show');
+            
+            // Hide all dropdown contents
             document.querySelectorAll('.dropdown-content').forEach(content => {
-                content.style.display = 'none';
+                content.classList.remove('show');
+                // Reset the opacity and max-height before hiding
+                content.style.opacity = '0';
+                content.style.maxHeight = '0';
             });
+
+            // Reset all dropdown button indicators
             document.querySelectorAll('.dropdown-btn span').forEach(span => {
                 span.textContent = '▼';
             });
-             if (!isActive) {
-                dropdownContent.style.display = 'block';
+
+            if (!isActive) {
+                // Show the clicked dropdown content
+                dropdownContent.classList.add('show');
+                // Force reflow to apply max-height transition
+                dropdownContent.style.opacity = '1';
+                dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
                 this.querySelector('span').textContent = '▲';
+
+                // Scroll to the clicked dropdown button
+                const rect = this.getBoundingClientRect();
+                window.scrollTo({
+                    top: rect.top + window.scrollY - (window.innerHeight / 2) + (this.offsetHeight / 2),
+                    behavior: 'smooth'
+                });
+            } else {
+                // Hide the clicked dropdown content
+                dropdownContent.style.opacity = '0';
+                dropdownContent.style.maxHeight = '0';
             }
-            dropdownContent.style.display = isActive ? 'none' : 'block';
         });
     });
 });
+
 
 var modal = document.getElementById("modal");
 
