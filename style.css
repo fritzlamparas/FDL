@@ -1,4 +1,4 @@
-/* Basic CSS reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ body, html{
     margin-right: 50px;
     z-index: 999;
     text-decoration: none;
-    color: #ECF0F1; /*required since they are hyperlinks*/
+    color: #ECF0F1;
 }
 .navs{
     font-style: normal;
@@ -46,7 +46,7 @@ body, html{
     font-size: 25px;
     margin-right: 20px;
     text-decoration: none;
-    color: #ECF0F1; /*required since they are hyperlinks*/
+    color: #ECF0F1; 
 }
 .resume{
     position: relative;
@@ -59,12 +59,12 @@ body, html{
     text-align: center;
     padding: 5px;
     border-radius: 5px;
-    /*Positioning*/position: absolute;
+    position: absolute;
     z-index: 1;
     bottom: 100%;
-    /*Positionabovethelink*/left: 50%;
+    left: 50%;
     transform: translateX(-50%);
-    /*Optionalstyling*/opacity: 0;
+    opacity: 0;
     transition: opacity 0.3s;
     white-space: nowrap;
     -webkit-transition: opacity 0.3s;
@@ -78,13 +78,13 @@ body, html{
   }
 .currnav{
     display: inline-block; 
-    border-bottom: 2px solid #ECF0F1; /*underline color for current shown page*/
+    border-bottom: 2px solid #ECF0F1; 
     padding-bottom: 5px;
 }
 .socmed button {
     background: none;
     border: none;
-    color: #ECF0F1; /*for buttons*/
+    color: #ECF0F1;
     cursor: pointer;
     margin-left: 20px;
 }
@@ -107,15 +107,15 @@ body, html{
     align-items: center;
     text-align: center;
     font-size: 25px;
-    opacity: 0; /* Invisible by default */
-    transform: translateY(-20px); /* Move it up by default */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition properties */
+    opacity: 0;
+    transform: translateY(-20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
 }
-/* Show state for dropdown menu */
+
 .dropdown-menu.show {
-    display: flex; /* Use flex to display the menu */
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to its original position */
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
 .dropdown-menu ul {
     list-style-type: none;
@@ -158,14 +158,13 @@ img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    border: 1px solid #2c3e50; /* Add border to color box for better visibility */
+    border: 1px solid #2c3e50;
     display: inline-flex;
 }
 canvas{
     width: 100% !important;
     height: auto !important;
 }
-/*for the dropdown*/
 .work-experience{
     flex-direction: column; 
     width: 50%; 
@@ -196,17 +195,15 @@ canvas{
     outline: none;
 }
 .dropdown-content {
-    display: none; /* Initially hidden */
-    opacity: 0; /* Initially invisible */
-    max-height: 0; /* Initially zero height */
-    overflow: hidden; /* Hide overflowing content */
-    transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transitions */
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden; 
+    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
-/* Show state for dropdown content */
 .dropdown-content.show {
-    display: block; /* Set display to block */
-    opacity: 1; /* Fully visible */
-    max-height: 500px; /* Adjust to fit your content's maximum height */
+    display: block; 
+    opacity: 1;
 }
 
 .dropdown-content p {
@@ -217,12 +214,12 @@ canvas{
 }
 
 .responsibilities {
-    margin: 20px; /* Remove default margin */
-    padding-left: 20px; /* Add some padding for the bullets */
-    list-style-type: disc; /* Add bullets */
+    margin: 20px;
+    padding-left: 20px; 
+    list-style-type: disc; 
 }
 .responsibilities li {
-    margin-bottom: 10px; /* Add space between list items */
+    margin-bottom: 10px; 
     margin-left: 10px;
 }
 .lighter .job .dropdown-btn{
@@ -233,14 +230,13 @@ canvas{
 .title{
     width: 50%;
     position: sticky;
-    top: 0;  /* Element will stick to the top of its containing block */
+    top: 0; 
     text-align: left;
     
 }
 .flexs{
     align-items: flex-start;
 }
-/* For the certdisplay */
 .cert li {
     cursor: pointer;
 }
@@ -252,16 +248,16 @@ canvas{
     color: #2c3e50;
 }
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -274,7 +270,7 @@ canvas{
     justify-content: center;
 }
 .modal-content.show {
-    transform: scale(1); /* Scale to normal size */
+    transform: scale(1);
 }
 .close {
     color: #ECF0F1;
@@ -295,7 +291,7 @@ canvas{
 .cert-img {
     max-width: 90%;
     max-height: 90%;
-    object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
+    object-fit: contain;
     display: block;
 }
 .footer{
@@ -327,15 +323,15 @@ canvas{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex: 1 1 50%; /* Each div takes up 50% of the row */
-    box-sizing: border-box; /* Ensures padding/margins don't cause overflow */
+    flex: 1 1 50%;
+    box-sizing: border-box; 
     width: 50%;
     padding: 10px 0;
 }
 .card {
     width: 50%;
-    flex: 1 1 50%; /* Each div takes up 50% of the row */
-    box-sizing: border-box; /* Ensures padding/margins don't cause overflow */
+    flex: 1 1 50%;
+    box-sizing: border-box; 
     height: 254px;
     border-radius: 4px;
     background: #2c3e50;

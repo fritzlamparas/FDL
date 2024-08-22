@@ -6,13 +6,13 @@ function toggleMenu() {
         dropdownMenu.classList.remove("show");
         setTimeout(() => {
             dropdownMenu.style.display = "none";
-        }, 300); // Delay to match the transition duration
+        }, 300); 
         body.classList.remove("no-scroll");
     } else {
         dropdownMenu.style.display = "flex";
         setTimeout(() => {
             dropdownMenu.classList.add("show");
-        }, 10); // Short delay to ensure the display property is applied
+        }, 10); 
         body.classList.add("no-scroll");
     }
 }
@@ -53,7 +53,7 @@ function toggleMenu() {
             labels: labels,
             datasets: [{
                 label: 'Proficiency',
-                data: [87.5, 90, 95, 87.5, 95, 85, 85, 87.5, 87.5, 100],
+                data: [82.5, 85, 90, 82.5, 90, 80, 80, 82.5, 82.5, 100],
                 backgroundColor: backgroundColors,
                 borderColor: borderColors,
                 borderWidth: 1
@@ -97,8 +97,32 @@ function toggleMenu() {
         legendContainer.appendChild(legendItem);
     });
 });
+function smoothScrollTo(element) {
+    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 600; 
+    let startTime = null;
 
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1); 
+        const scrollY = startPosition + distance * easeInOutQuad(progress);
+        window.scrollTo(0, scrollY);
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
 
+    function easeInOutQuad(t) {
+        return t < 0.5
+            ? 2 * t * t
+            : -1 + (4 - 2 * t) * t;
+    }
+
+    requestAnimationFrame(animation);
+}
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownButtons = document.querySelectorAll('.dropdown-btn');
 
@@ -106,38 +130,41 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const dropdownContent = this.nextElementSibling;
             const isActive = dropdownContent.classList.contains('show');
-            
-            // Hide all dropdown contents
-            document.querySelectorAll('.dropdown-content').forEach(content => {
-                content.classList.remove('show');
-                // Reset the opacity and max-height before hiding
-                content.style.opacity = '0';
-                content.style.maxHeight = '0';
+            document.querySelectorAll('.dropdown-content.show').forEach(content => {
+                if (content !== dropdownContent) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    setTimeout(() => {
+                        content.style.maxHeight = '0';
+                        content.style.opacity = '0';
+                    }, 10);
+                    setTimeout(() => {
+                        content.classList.remove('show');
+                    }, 300);
+                }
             });
-
-            // Reset all dropdown button indicators
             document.querySelectorAll('.dropdown-btn span').forEach(span => {
-                span.textContent = '▼';
+                span.textContent = '▼';     
             });
-
             if (!isActive) {
-                // Show the clicked dropdown content
-                dropdownContent.classList.add('show');
-                // Force reflow to apply max-height transition
-                dropdownContent.style.opacity = '1';
-                dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
-                this.querySelector('span').textContent = '▲';
-
-                // Scroll to the clicked dropdown button
-                const rect = this.getBoundingClientRect();
-                window.scrollTo({
-                    top: rect.top + window.scrollY - (window.innerHeight / 2) + (this.offsetHeight / 2),
-                    behavior: 'smooth'
-                });
+                setTimeout(() => {
+                    smoothScrollTo(this);
+                },300); 
+                setTimeout(() => {
+                
+                    dropdownContent.classList.add('show');
+                    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
+                    dropdownContent.style.opacity = '1';
+                    this.querySelector('span').textContent = '▲';
+                },1200);
             } else {
-                // Hide the clicked dropdown content
-                dropdownContent.style.opacity = '0';
-                dropdownContent.style.maxHeight = '0';
+                dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'; 
+                setTimeout(() => {
+                    dropdownContent.style.maxHeight = '0';
+                    dropdownContent.style.opacity = '0';
+                }, 10); 
+                setTimeout(() => {
+                    dropdownContent.classList.remove('show');
+                }, 300); 
             }
         });
     });
