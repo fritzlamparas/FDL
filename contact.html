@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">  
+        <meta name="viewport" content = "width=device-width, initial-scale=1">
+        <link rel="stylesheet" href = "style.css">
+        <title>FDL</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://kit.fontawesome.com/dda0a0614a.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <header class="header darker" style="flex-direction: row;">
+            <div class="logonav darker" style="padding: 0;">
+                <a href="index.html" class ="logo">FDL</a>
+                <nav>
+                    <a href="index.html" class="navs">Info</a>
+                    <a href="projects.html" class="navs">Projects</a>
+                    <a href="contact.html" class="navs currnav">Contact</a>
+                </nav>
+            </div>
+            <div class="socmed">
+                <a href="https://drive.google.com/file/d/1m3LCaJJBKu0QXZPLsvTmFQs_siB_aiLQ/view" class="dlresume" target="_blank"> 
+                    <button class="button" type="button">
+                    <span class="button__text">Resume</span>
+                    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+                    </button>
+                </a>
+                <a href="https://www.facebook.com/fritzkie.paras" target="_blank">
+                    <i class="fa-brands fa-square-facebook fa-3x"></i></a>    
+                <a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/" target="_blank">   
+                    <i class="fa-brands fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/fritzlamparas?tab=repositories" target="_blank"> 
+                    <i class="fa-brands fa-square-github fa-3x"></i></a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
+                ☰
+            </div>
+            <div class="dropdown-menu darker" id="dropdownMenu">
+                <ul>
+                  <li><a href="index.html">Info</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>    
+                  <li><a href="https://drive.google.com/file/d/1m3LCaJJBKu0QXZPLsvTmFQs_siB_aiLQ/view" target="_blank">Get Resume</a></li>
+                  <li><a href="https://www.facebook.com/fritzkie.paras" target="_blank">Facebook</a></li>
+                  <li><a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com/fritzlamparas?tab=repositories" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="lighter flexcol">
+            <div class="txt">
+                Contact Info
+            </div>
+            <div class="coninf">
+                <a href="https://m.me/fritzkie.paras" target="_blank">
+                    <i class="fa-brands fa-facebook-messenger fa-2x"></i><span>Messenger</span></a>    
+                <a href="mailto:fritzlamparasofficial@gmail.com" target="_blank">   
+                    <i class="fa-brands fa-google fa-2x"></i><span>Gmail</span></a>
+                <a href="tel:+639510744514"> 
+                    <i class="fa-solid fa-phone fa-2x"></i><span>+639510744514</span></a>
+                <a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/" target="_blank">   
+                    <i class="fa-brands fa-linkedin fa-2x"></i><span>LinkedIn</span></a>
+                <a href="https://www.instagram.com/fritzlamparas/" target="_blank">   
+                    <i class="fa-brands fa-instagram fa-2x"></i><span>Instagram</span></a>          
+                <a href="https://teams.microsoft.com/l/chat/0/0?users=fdlamparas@iskolarngbayan.pup.edu.ph" target="_blank">   
+                    <i class="fa-brands fa-microsoft fa-2x"></i><span>Microsoft Teams</span></a>
+                <a href="https://discord.com/login" target="_blank">   
+                    <i class="fa-brands fa-discord fa-2x"></i><span>Discord: madwolf0531</span></a>
+                <a href="https://steamcommunity.com/profiles/76561199494575397/" target="_blank">   
+                    <i class="fa-brands fa-steam fa-2x"></i><span>Steam</span></a>    
+  
+            </div>
+
+        </div>
+        <div class="darker flexcol">
+            <div class="txt">
+                Character Reference
+            </div>
+            <div class="coninf">
+                <a class="darker des flexcol" href="tel:+639510744514">
+                    <strong>TL Aljohn Tolentino</strong>
+                    <br>
+                    <p>Team Leader</p>
+                    <p>Best Buy Primary Support Voice</p>
+                    <p>Teleperformance, Vertis North, Quezon City</p>
+                    <p>09947670496</p>
+                </a>
+                <a class="darker des flexcol" href="tel:+639510744514">
+                    <strong>Mr. Vergel Villegas</strong>
+                    <br>
+                    <p>Subject Matter Expert</p>
+                    <p>Best Buy Primary Support Voice</p>
+                    <p>Teleperformance, Vertis North, Quezon City</p>
+                    <p>09512302931</p>
+                </a>
+                <a class="darker des flexcol" href="tel:+639510744514">
+                    <strong>Engr. Orland D. Tubola</strong>
+                    <br>
+                    <p>Director</p>
+                    <p>Research Institute for Strategic Foresight and Innovation</p>
+                    <p>Polytechnic University of the Philippines, Sta. Mesa, Manila </p>
+                    <p>09778509668</p>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <div class="work-experience">
+                <p><strong>© Fritz Lamparas 2024</strong></p>
+                <p><strong>(0951) 074-0514</strong></p>
+                <p><strong>58 San Luis St. Villareal Brgy. Gulod, Novaliches, Quezon City, Philippines, 1117</strong></p>
+            </div>
+            <div class="work-experience">
+                <p><strong>Hosted with: <a href="https://pages.github.com/"><i class="fa-brands fa-github fa-1x"></i>Github Pages</a></strong></p>
+            </div>
+        </footer>
+    <script src="scripts.js"></script>
+    <script src="projscripts.js"></script>
+    </body>
+    
+    
+</html>

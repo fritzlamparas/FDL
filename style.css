@@ -18,7 +18,6 @@ body, html{
     display: flex;
     align-items: center;
     padding: 25px 2%;
-
 }
 .lighter{
     background-color: #ECF0F1;
@@ -27,7 +26,7 @@ body, html{
     align-items: center;
     padding: 25px 2%;
 }
-.header{
+header{
     width: 100%;
     justify-content: space-between;
 }
@@ -85,7 +84,7 @@ body, html{
     display: flex;
     align-items: center;
 }
-.socmed button {
+.socmed a {
     background: none;
     border: none;
     color: #ECF0F1;
@@ -298,27 +297,36 @@ canvas{
     object-fit: contain;
     display: block;
 }
-.footer{
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+footer{
+    background-color: #ECF0F1;
+    color: #2c3e50;
+    display: flex;
+    align-items: space-evenly;
+    padding: 25px 2%;
 }
-.footer .navs{
-    padding: 5px 0;
+footer a,footer p{
+    color: #2c3e50;
+    text-align: left;
+    font-size:small;
+    font-size: 12px;
+    text-decoration: none;   
 }
-.footer a,.footer p{
-    text-decoration: none; color: #ECF0F1;
-    margin-top: 10px;
+footer a{
+    cursor: pointer;
 }
-.footer a:hover{
-    text-decoration: underline;
+footer a:hover{
+    border-bottom: 1px solid #2c3e50;
+    cursor: pointer;
 }
-.footer hr{
+footer i{
+    margin: 3px;
+}
+hr{
     width: 100%;
-    height:10px;
+    height:5px;
     border-width:0;
-    color:#ECF0F1;
-    background-color:#ECF0F1;
+    color:#2c3e50;
+    background-color:#2c3e50;
 }
 .flexj{
     flex-wrap: wrap;
@@ -564,6 +572,70 @@ canvas{
 .dlresume .button:active {
     border: 1px solid #ECF0F1;
 }
+.flexcol{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lighter.flexcol a span{
+   font-family: "Montserrat", serif;
+   text-align: left;
+   font-size:small;
+   font-size: 15px;
+   padding: 20px 10px;
+}
+.lighter.flexcol a{
+    margin: 10px;
+    display: flex;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: #ECF0F1;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+.lighter.flexcol a:hover{
+    transform: translateY(-5px); /* Elevates the element */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+.coninf{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.coninf .des{
+    margin: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-decoration: none;
+    border: 3px solid #ECF0F1;
+    color: #ECF0F1;
+    background-color: #2c3e50;
+    width: 600px;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Smooth transition */
+    margin: 20px;
+}
+.coninf .des:hover{
+    transform: translateY(-5px); /* Elevates the element */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+
+}
+.coninf .des p{
+    margin: 5px;
+}
 @media screen and (max-width: 768px){
     body{
         width: 100%;
@@ -625,6 +697,12 @@ canvas{
     }
     .categ .hodo img {
         max-width: 400px;
+    }
+    .flexcol button{
+        width: 250px;
+    }
+    footer a{
+        display: inline-block;
     }
 }
 body.no-scroll {

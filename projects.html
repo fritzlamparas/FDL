@@ -13,12 +13,13 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
-        <div class="header darker" style="flex-direction: row;">
+        <header class="header darker" style="flex-direction: row;">
             <div class="logonav darker" style="padding: 0;">
                 <a href="index.html" class ="logo">FDL</a>
                 <nav>
                     <a href="index.html" class="navs">Info</a>
                     <a class="navs currnav">Projects</a>
+                    <a href="contact.html" class="navs">Contact</a>
                 </nav>
             </div>
             <div class="socmed">
@@ -28,12 +29,12 @@
                     <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
                     </button>
                 </a>
-                <a href="https://www.facebook.com/fritzkie.paras">
-                    <button><i class="fa-brands fa-square-facebook fa-3x"></i></button></a>    
-                <a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/">   
-                    <button><i class="fa-brands fa-linkedin fa-3x"></i></button></a>
-                <a href="https://github.com/fritzlamparas?tab=repositories"> 
-                    <button><i class="fa-brands fa-square-github fa-3x"></i></button></a>                  
+                <a href="https://www.facebook.com/fritzkie.paras" target="_blank">
+                    <i class="fa-brands fa-square-facebook fa-3x"></i></a>    
+                <a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/" target="_blank">   
+                    <i class="fa-brands fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/fritzlamparas?tab=repositories" target="_blank"> 
+                    <i class="fa-brands fa-square-github fa-3x"></i></a>         
             </div>
             <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
                 ☰
@@ -42,13 +43,14 @@
                 <ul>
                   <li><a href="index.html">Info</a></li>
                   <li><a href="projects.html">Projects</a></li>
-                  <li><a href="https://drive.google.com/file/d/1m3LCaJJBKu0QXZPLsvTmFQs_siB_aiLQ/view">Get Resume</a></li>
-                  <li><a href="https://www.facebook.com/fritzkie.paras">Facebook</a></li>
-                  <li><a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/">LinkedIn</a></li>
-                  <li><a href="https://github.com/fritzlamparas?tab=repositories">Github</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="https://drive.google.com/file/d/1m3LCaJJBKu0QXZPLsvTmFQs_siB_aiLQ/view" target="_blank">Get Resume</a></li>
+                  <li><a href="https://www.facebook.com/fritzkie.paras" target="_blank">Facebook</a></li>
+                  <li><a href="https://www.linkedin.com/in/fritz-lamparas-418b57219/" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com/fritzlamparas?tab=repositories" target="_blank">Github</a></li>
                 </ul>
             </div>
-        </div>
+        </header>
         <div class="section flexj" id="studyforge">
             <div class="categ">
                 <img src="icons/sf.png" alt="StudyForge" title="StudyForge">
@@ -495,12 +497,17 @@
 
             </div>
         </div>
-        <div class="darker footer des">
-            <hr>
-            <a href="mailto:fritzlamparasofficial@gmail.com"><strong>Email Address:</strong> fritzlamparasofficial@gmail.com</a>
-            <a><strong>Contact Num. :</strong> (0951) 074-0514</a>
-            <a><strong>Home Address:</strong> 58 San Luis St. Villareal Brgy. Gulod, Novaliches, Quezon City, Philippines, 1117</a>
-        </div>
+        <hr>
+        <footer>
+            <div class="work-experience">
+                <p><strong>© Fritz Lamparas 2024</strong></p>
+                <p><strong>(0951) 074-0514</strong></p>
+                <p><strong>58 San Luis St. Villareal Brgy. Gulod, Novaliches, Quezon City, Philippines, 1117</strong></p>
+            </div>
+            <div class="work-experience">
+                <p><strong>Hosted with: <a href="https://pages.github.com/"><i class="fa-brands fa-github fa-1x"></i>Github Pages</a></strong></p>
+            </div>
+        </footer>
     <script src="scripts.js"></script>
     <script src="projscripts.js"></script>
     </body>
