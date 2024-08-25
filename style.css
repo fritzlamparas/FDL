@@ -605,6 +605,9 @@ hr{
 .coninf .des p{
     margin: 5px;
 }
+.coninf a i{
+    margin-right: 5px;
+}
 @media screen and (max-width: 768px){
     body{
         width: 100%;
