@@ -124,13 +124,13 @@ function smoothScrollTo(element) {
     requestAnimationFrame(animation);
 }
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+    const dropdownButtons = document.querySelectorAll('.ddown');
 
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function() {
             const dropdownContent = this.nextElementSibling;
             const isActive = dropdownContent.classList.contains('show');
-            document.querySelectorAll('.dropdown-content.show').forEach(content => {
+            document.querySelectorAll('.ddownc.show').forEach(content => {
                 if (content !== dropdownContent) {
                     content.style.maxHeight = content.scrollHeight + 'px';
                     setTimeout(() => {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 300);
                 }
             });
-            document.querySelectorAll('.dropdown-btn span').forEach(span => {
+            document.querySelectorAll('.ddown span').forEach(span => {
                 span.textContent = '▼';     
             });
             if (!isActive) {
