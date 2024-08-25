@@ -680,9 +680,10 @@ hr{
         width: 250px;
     }
     .coninf .des{
-        width: 300px;
+        width: 250px;
+        height: 400px;
     }
-    .coninf .des p{
+    .coninf .des{
         text-align: center;
     }
 }
