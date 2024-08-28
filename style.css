@@ -1,10 +1,10 @@
-
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
  }
-body, html{
+
+ body, html{
     margin: 0;
     padding: 0;
     font-family: "Montserrat", serif;
@@ -12,6 +12,15 @@ body, html{
     font-style: normal;
     scroll-behavior: smooth;
 }
+
+a{
+    text-decoration: none;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 .darker{
     background-color: #2c3e50;
     color: #ECF0F1;
@@ -19,6 +28,7 @@ body, html{
     align-items: center;
     padding: 25px 2%;
 }
+
 .lighter{
     background-color: #ECF0F1;
     color: #2c3e50;
@@ -26,30 +36,35 @@ body, html{
     align-items: center;
     padding: 25px 2%;
 }
+
 header{
     width: 100%;
     justify-content: space-between;
 }
+
 .logo{
     font-style:normal;
     font-weight: 500;
     font-size: 50px;
     margin-right: 50px;
     z-index: 999;
-    text-decoration: none;
+    
     color: #ECF0F1;
 }
+
 .navs{
     font-style: normal;
     font-weight: 100;
     font-size: 25px;
     margin-right: 20px;
-    text-decoration: none;
+    
     color: #ECF0F1; 
 }
+
 .resume{
     position: relative;
 }
+
 .resume::after {
     content: "Download his resume";
     visibility: hidden;
@@ -71,19 +86,23 @@ header{
     -ms-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
 }
-  .resume:hover::after {
+
+.resume:hover::after {
     visibility: visible;
     opacity: 1;
-  }
+}
+
 .currnav{
     display: inline-block; 
     border-bottom: 2px solid #ECF0F1; 
     padding-bottom: 5px;
 }
+
 .socmed {
     display: flex;
     align-items: center;
 }
+
 .socmed a button{
     background: none;
     border: none;
@@ -91,17 +110,20 @@ header{
     cursor: pointer;
     margin-left: 20px;
 }
+
 .socmed a {
     color: #ECF0F1;
     cursor: pointer;
     margin-left: 20px;
 }
-.menu-icon {
+
+.burger {
     display: none;
     font-size: 50px;
     cursor: pointer;
     z-index: 999;
 }
+
 .dropdown-menu {
     display: none;
     flex-direction: column;
@@ -125,43 +147,51 @@ header{
     opacity: 1;
     transform: translateY(0);
 }
+
 .dropdown-menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-  
+ 
 .dropdown-menu li {
     margin: 10px 0;
 }
+
 .dropdown-menu a {
     color: #ECF0F1;
-    text-decoration: none;
+    
 }
+
 img {
     max-height: 20%;
     max-width: 20%;
 }
+
 .txt{
     text-align: center;
     font-size: 40px;
     padding: 20px;
     font-weight: bold;
 }
+
 .des{
     text-align: left;
     font-size:small;
     font-size: 25px;
     padding: 20px;
 }
+
 .chartcon{
     width: 33.33%;
     margin: auto;
 }
+
 .legendItem {
     margin: 10px;
     font-size: 20px;
 }
+
 .colorBox {
     width: 20px;
     height: 20px;
@@ -169,22 +199,26 @@ img {
     border: 1px solid #2c3e50;
     display: inline-flex;
 }
+
 canvas{
     width: 100% !important;
     height: auto !important;
 }
+
 .half{
     flex-direction: column; 
     width: 50%; 
     align-items:flex-start; 
     padding: 0;
 }
+
 .job {
     margin-bottom: 20px;
     padding: 0;
     width: 100%;
     overflow: hidden;
 }
+
 .ddown {
     color: #ECF0F1;
     text-align: left;
@@ -199,9 +233,11 @@ canvas{
     justify-content: space-between;
     font-family: "Montserrat", serif;
 }
+
 .ddown:focus {
     outline: none;
 }
+
 .ddownc {
     display: none;
     opacity: 0;
@@ -209,6 +245,7 @@ canvas{
     overflow: hidden; 
     transition: opacity 0.3s ease, max-height 0.3s ease;
 }
+
 .ddownc.show {
     display: block; 
     opacity: 1;
@@ -217,6 +254,7 @@ canvas{
 .ddownc p {
     margin: 20px;
 }
+
 .ddownc hr {
     border: 1px dashed #ECF0F1;    
 }
@@ -226,35 +264,42 @@ canvas{
     padding-left: 20px; 
     list-style-type: disc; 
 }
+
 .responsibilities li {
     margin-bottom: 10px; 
     margin-left: 10px;
 }
+
 .lighter .job .ddown{
     background-color: #ECF0F1; 
     color: #2c3e50; 
     border-top: 1px solid #2c3e50;
 }
+
 .title{
     width: 50%;
     position: sticky;
     top: 0; 
     text-align: left;
-    
 }
+
 .flexs{
     align-items: flex-start;
 }
+
 .cert li {
     cursor: pointer;
 }
+
 .cert li:hover{
     text-decoration: underline;
 }
+
 .cert .navs{
     cursor: pointer;
     color: #2c3e50;
 }
+
 .modal {
     display: none; 
     position: fixed; 
@@ -270,6 +315,7 @@ canvas{
     justify-content: center;
     flex-direction: column;
 }
+
 .modal-content {
     width: 90%;
     height: 90%;
@@ -277,9 +323,11 @@ canvas{
     align-items: center;
     justify-content: center;
 }
+
 .modal-content.show {
     transform: scale(1);
 }
+
 .close {
     color: #ECF0F1;
     font-size: 28px;
@@ -288,20 +336,22 @@ canvas{
     display: flex;
     width: 90%;
     justify-content: flex-end;
-
 }
+
 .close:hover,
 .close:focus {
     color: none;
-    text-decoration: none;
+    
     cursor: pointer;
 }
+
 .cert-img {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
     display: block;
 }
+
 footer{
     background-color: #ECF0F1;
     color: #2c3e50;
@@ -309,33 +359,32 @@ footer{
     align-items: space-evenly;
     padding: 25px 2%;
 }
+
 footer a,footer p{
     color: #2c3e50;
     text-align: left;
     font-size:small;
     font-size: 12px;
-    text-decoration: none;   
+       
 }
+
 footer a{
     cursor: pointer;
 }
+
 footer a:hover{
     border-bottom: 1px solid #2c3e50;
     cursor: pointer;
 }
+
 footer i{
     margin: 3px;
 }
-hr{
-    width: 100%;
-    height:5px;
-    border-width:0;
-    color:#2c3e50;
-    background-color:#2c3e50;
-}
+
 .flexj{
     flex-wrap: wrap;
 }
+
 .categ{
     display: flex;
     justify-content: flex-start;
@@ -346,6 +395,7 @@ hr{
     padding: 10px 0;
     flex-wrap: wrap;
 }
+
 .card {
     width: 50%;
     flex: 1 1 50%;
@@ -355,10 +405,10 @@ hr{
     background: #2c3e50;
     display: flex;
     gap: 5px;
-    padding: .4em;
-    
-  }
-  .card a {
+    padding: .4em; 
+  
+}
+.card a {
     height: 100%;
     flex: 1;
     overflow: hidden;
@@ -370,11 +420,13 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .card a:hover {
+}
+
+.card a:hover {
     flex: 3;
-  }
-  .card a span {
+}
+
+.card a span {
     min-width: 14em;
     padding: .5em;
     text-align: center;
@@ -384,51 +436,57 @@ hr{
     color: #ECF0F1;
     letter-spacing: .1em;
     font-size: 18px;
-  }
-  .card a:hover span {
-    transform: rotate(0);
-  }
-.card a {
-    text-decoration: none;
 }
+
+.card a:hover span {
+    transform: rotate(0);
+}
+
 .categ img{
     width: 75px;
     height: 75px;
     object-fit: cover;
     margin: 10px;
-
 }
+
 .categ .fade img{
     width: 100%;
     height: 100%;
     max-width: 260px;
 }
+
 .categ .txt{
     text-align: left;
 }
+
 .slideshow-container {
     position: relative;
     max-width: 1000px;
     margin: auto;
 }
+
 .categ .hodo img {
     max-width: 600px;
     vertical-align: middle;
 }
+
 .mySlides {
     display: none;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
+
 .fade {
     animation-name: fade;
     animation-duration: 3.0s;
 }
+
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
 }
+
 .dot {
     height: 15px;
     width: 15px;
@@ -438,13 +496,16 @@ hr{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
 .active {
     background-color: #2c3e50;
 }
+
 .section {
     display: none;
     transition: transform 0.6s ease-in-out;
 }
+
 .section.active {
     background-color: #ECF0F1;
     color: #2c3e50;
@@ -452,13 +513,15 @@ hr{
     align-items: center;
     padding: 25px 2%;
 }
+
 .dlgame{
-    text-decoration: none;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
 }
+
 .button {
     position: relative;
     width: 150px;
@@ -471,16 +534,19 @@ hr{
     background-color: #ECF0F1;
     overflow: hidden;
 }
-  .button, .button__icon, .button__text {
+
+.button, .button__icon, .button__text {
     transition: all 0.3s;
 }
-  .button .button__text {
+
+.button .button__text {
     transform: translateX(22px);
     color: #2c3e50;
     font-weight: 600;
     font-family: "Montserrat", serif;
 }
-  .button .button__icon {
+
+.button .button__icon {
     position: absolute;
     transform: translateX(109px);
     height: 100%;
@@ -490,62 +556,75 @@ hr{
     align-items: center;
     justify-content: center;
 }
-  .button .svg {
+
+.button .svg {
     width: 20px;
     fill: #ECF0F1;
 }
   
-  .button:hover {
+.button:hover {
     background: #2c3e50;
 }
-  
-  .button:hover .button__text {
+
+.button:hover .button__text {
     color: transparent;
 }
-  
-  .button:hover .button__icon {
+
+.button:hover .button__icon {
     width: 148px;
     transform: translateX(0);
 }
-  .button:active .button__icon {
+
+.button:active .button__icon {
     background-color: #2c3e50;
 }
-  .button:active {
+
+.button:active {
     border: 1px solid #2c3e50;
 }
+
 .dlresume{
-    text-decoration: none;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .dlresume .button {
     border: 3px solid #ECF0F1;
     background-color: #2c3e50;
 }
+
 .dlresume .button .button__text {
     color: #ECF0F1;
 }
+
 .dlresume .button .button__icon {
     background-color: #ECF0F1;
 }
+
 .dlresume .button .svg {
     fill: #2c3e50;
 }
+
 .dlresume .button:hover {
     background: #ECF0F1;
 }
+
 .dlresume .button:active .button__icon {
     background-color: #ECF0F1;
 }
+
 .dlresume .button:active {
     border: 1px solid #ECF0F1;
 }
+
 .flexcol{
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .lighter.flexcol a span{
    font-family: "Montserrat", serif;
    text-align: left;
@@ -553,13 +632,13 @@ hr{
    font-size: 15px;
    padding: 20px 10px;
 }
+
 .lighter.flexcol a{
     margin: 10px;
     display: flex;
     width: 350px;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -569,18 +648,21 @@ hr{
     background-color: #ECF0F1;
     color: #2c3e50;
     border: 2px solid #2c3e50;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
 }
+
 .lighter.flexcol a:hover{
     transform: translateY(-5px); /* Elevates the element */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
 }
+
 .coninf{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
 }
+
 .coninf .des{
     margin: 20px;
     border-radius: 5px;
@@ -588,7 +670,6 @@ hr{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    text-decoration: none;
     border: 3px solid #ECF0F1;
     color: #ECF0F1;
     background-color: #2c3e50;
@@ -597,57 +678,70 @@ hr{
     transition: all 0.3s ease; /* Smooth transition */
     margin: 20px;
 }
+
 .coninf .des:hover{
     transform: translateY(-5px); /* Elevates the element */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
 
 }
+
 .coninf .des p{
     margin: 5px;
 }
+
 .coninf a i{
     margin-right: 5px;
 }
+
 @media screen and (max-width: 768px){
-    body{
-        width: 100%;
-    }
+
     .logonav nav{
         display:none;      
     }
+
     .socmed{
         display: none;
     }
-    .menu-icon {
+
+    .burger {
         display: inline;
     }
+
     img {
         max-height: 40%;
         max-width: 40%;
     }
+
     .darker, .lighter{
         flex-direction: column;    
     }
+
     .txt, .ddown{
         font-size: 25px;
     }
+
     .des, .legendItem{
         font-size: 15px;
     }
+
     .chartcon{
         width: 66.66%;
     }
+
     .half{
         width: 100%;
     }
+
     .title{
         position: relative;
     }
+
     .categ, .card{
         display: inline-block;
         width: 100%;
         flex: 1 1 100%; 
     }
+
     .card a span{
         transform: rotate(0);
         -webkit-transform: rotate(0);
@@ -655,38 +749,46 @@ hr{
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
     }
+
     .card a {
         margin: 20px 0;
     }
+
     .categ h2{
         margin: 0px 10px;
     }
+
     .categ .txt{
         text-align: left;
     }
+    
     .categ .fade img{
         max-width: 200px;
     }
+
     .categ .hodo img {
         max-width: 400px;
     }
+
     .flexcol button{
         width: 250px;
     }
+
     footer a{
         display: inline-block;
     }
+
     .lighter.flexcol a{
         width: 250px;
     }
+
     .coninf .des{
         width: 250px;
         height: 400px;
     }
+
     .coninf .des{
         text-align: center;
     }
+
 }
-body.no-scroll {
-    overflow: hidden;
-  }
