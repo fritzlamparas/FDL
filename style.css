@@ -681,7 +681,7 @@ footer i{
 
 .coninf .des:hover{
     transform: translateY(-5px); /* Elevates the element */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Adds shadow */
 
 }
 
